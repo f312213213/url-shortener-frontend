@@ -20,7 +20,7 @@ function Home () {
       }
     }
     e.preventDefault()
-    if (URLRef.current.value === '') return
+    if (URLRef.current.value === '') return setResponseText('不要搗亂啦！')
     try {
       const response = await fetch(`${constant.URL}short`, {
         method: 'POST',
